@@ -1,10 +1,11 @@
 import { combineReducers } from 'redux';
-import PostsReducer from './posts_reducer'
+import { reducer as formReducer } from 'redux-form';
+import PostsReducer from './posts_reducer';
 
+//Key of redux-form reducer MUST be called 'form'
 const rootReducer = combineReducers({
-  posts: PostsReducer
-  
+  posts: PostsReducer,
+  form: formReducer
 });
-
 
 export default rootReducer;
